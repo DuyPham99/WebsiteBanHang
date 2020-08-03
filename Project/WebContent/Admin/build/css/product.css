@@ -1,0 +1,75 @@
+/* .container {
+    padding: 2rem 0rem;
+  } */
+  
+  h4 {
+    margin: 2rem 0rem 1rem;
+  }
+.right_col  h1 {
+      margin-left: 380px;
+  }
+  
+.table-image tr td {   
+      vertical-align: middle;
+      text-align: center;
+}
+.table-image th {   
+    text-align: center;
+    vertical-align: middle;
+}
+.table-image img {
+    width: 50%
+}
+.wide {
+  width: 40%;
+  font-size: 15px;
+}
+/* Form Add CSS */
+.register-title {
+  margin-bottom: 30px;
+}
+.register-title h3 {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.form-register label {
+  font-size: 14px;
+  text-align: right;
+  color: black;
+}
+.form-register label .require {
+  color: red;
+}
+
+.form-register .form-group {
+  margin-bottom: 20px;
+}
+
+.form-register .form-group input {
+  font-size: 14px;
+}
+
+.form-register legend {
+  border-bottom: 1px solid #ededed;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding: 7px 0;
+}
+
+.agree {
+  color: #222222;
+  font-size: 13px;
+}
+
+.terms input[type=checkbox] {
+  vertical-align: middle;
+}
+.right_col  h1 {
+  margin-left: 380px;
+}
+fieldset {
+  margin-left: 235px;
+  margin-top: 30px;
+}

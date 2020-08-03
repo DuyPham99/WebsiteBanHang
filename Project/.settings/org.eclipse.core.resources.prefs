@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//WebContent/Admin/production/addClient.jsp=UTF-8
+encoding//WebContent/Admin/production/addProduct.jsp=UTF-8
+encoding//WebContent/Admin/production/client.jsp=UTF-8
+encoding//WebContent/Admin/production/editClient.jsp=UTF-8
+encoding//WebContent/Admin/production/editProduct.jsp=UTF-8
+encoding//WebContent/Admin/production/indexAdmin.jsp=UTF-8
+encoding//WebContent/Admin/production/productAdmin.jsp=UTF-8
+encoding//WebContent/User/checkout.jsp=UTF-8
+encoding//WebContent/User/forgot-password.jsp=UTF-8
+encoding//WebContent/User/index-4.jsp=UTF-8
+encoding//WebContent/User/style.css=UTF-8
+encoding//src/com/customer/register/Register.java=UTF-8
+encoding/<project>=UTF-8

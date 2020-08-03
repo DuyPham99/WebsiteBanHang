@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  
+
+  <display-name>CNPM</display-name>
+  <welcome-file-list>
+    <welcome-file>index-4.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config>
+    <session-timeout>525600</session-timeout>
+  </session-config>
+  
+  <!-- Context -->
+  <context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+           	 E:\JavaEE\CNPM\WebContent\images\ 
+           	 
+     </param-value> 
+	</context-param>
+	
+	<context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-display</param-name> 
+    <param-value>
+          http://localhost:8080/CNPM/images/
+     </param-value> 
+	</context-param>
+  <!-- register -->
+  <servlet>
+  	<servlet-name>Register</servlet-name>
+  	<servlet-class>com.customer.register.Register</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Register</servlet-name>
+  	<url-pattern>/User/Register.java</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>AddClient</servlet-name>
+  	<servlet-class>com.admin.customer.AddClientAdmin</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AddClient</servlet-name>
+  	<url-pattern>/Admin/production/AddClient</url-pattern>
+  </servlet-mapping>				
+  
+    
+    <!-- sign-in -->
+   <servlet>
+  	<servlet-name>SignIn</servlet-name>
+  	<servlet-class>com.customer.signin.SignIn</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>SignIn</servlet-name>
+  	<url-pattern>/User/SignIn.java</url-pattern>
+  </servlet-mapping>
+   <!-- sign-in -->
+  <servlet>
+  	<servlet-name>SignOut</servlet-name>
+  	<servlet-class>com.customer.signin.SignOut</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>SignOut</servlet-name>
+  	<url-pattern>/User/SignOut</url-pattern>
+  </servlet-mapping>
+   <!-- resetPSW -->
+	   <servlet>
+  	<servlet-name>ResetPassword</servlet-name>
+  	<servlet-class>com.admin.customer.ResetPass</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ResetPassword</servlet-name>
+  	<url-pattern>/User/Reset</url-pattern>
+  </servlet-mapping>
+   <!-- changePassword -->
+	   <servlet>
+  	<servlet-name>ChangePassword</servlet-name>
+  	<servlet-class>com.customer.register.ChangePassword</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ChangePassword</servlet-name>
+  	<url-pattern>/User/ChangePassword</url-pattern>
+  </servlet-mapping>
+  
+  <!-- adminProduct -->
+  <servlet>
+  	<servlet-name>InserProduct</servlet-name>
+  	<servlet-class>com.admin.product.InsertProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>InserProduct</servlet-name>
+  	<url-pattern>/Admin/production/InsertProduct</url-pattern>
+  </servlet-mapping>
+
+ <servlet>
+  	<servlet-name>UpdateProduct</servlet-name>
+  	<servlet-class>com.admin.product.UpdateProductAdmin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdateProduct</servlet-name>
+  	<url-pattern>/Admin/production/UpdateProduct</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>DeleteProduct</servlet-name>
+  	<servlet-class>com.admin.product.DeleteProductAdmin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteProduct</servlet-name>
+  	<url-pattern>/Admin/production/DeleteProduct</url-pattern>
+  </servlet-mapping>
+  <!-- adminCustomer -->
+   <servlet>
+  	<servlet-name>EditClient</servlet-name>
+  	<servlet-class>com.admin.customer.EditClientAdmin</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>EditClient</servlet-name>
+  	<url-pattern>/Admin/production/EditClientAdmin</url-pattern>
+  </servlet-mapping>	
+ 
+  <servlet>
+  	<servlet-name>DeleteClient</servlet-name>
+  	<servlet-class>com.admin.customer.DeleteClientAdmin</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DeleteClient</servlet-name>
+  	<url-pattern>/Admin/production/DeleteClientAdmin</url-pattern>
+  </servlet-mapping>
+  
+  <!-- trade -->
+  <servlet>
+  	<servlet-name>ShoppingCart</servlet-name>
+  	<servlet-class>com.cart.CartServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ShoppingCart</servlet-name>
+  	<url-pattern>/User/CartServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DeleteItem</servlet-name>
+  	<servlet-class>com.cart.DeleteItem</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DeleteItem</servlet-name>
+  	<url-pattern>/User/Delete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UpdateQuantity</servlet-name>
+  	<servlet-class>com.cart.UpdateQuantity</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UpdateQuantity</servlet-name>
+  	<url-pattern>/User/UpdateQuantity</url-pattern>
+  </servlet-mapping>
+  <!-- trade -->
+  <servlet>
+  	<servlet-name>CheckOut</servlet-name>
+  	<servlet-class>com.transaction.CheckOut</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>CheckOut</servlet-name>
+  	<url-pattern>/User/CheckOut</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>ChangeStatus</servlet-name>
+  	<servlet-class>com.transaction.ChangeStatus</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ChangeStatus</servlet-name>
+  	<url-pattern>/Admin/production/ChangeStatus</url-pattern>
+  </servlet-mapping> 
+
+	<servlet>
+  	<servlet-name>DeleteTransaction</servlet-name>
+  	<servlet-class>com.transaction.DeleteTransaction</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DeleteTransaction</servlet-name>
+  	<url-pattern>/Admin/production/DeleteTransaction</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
